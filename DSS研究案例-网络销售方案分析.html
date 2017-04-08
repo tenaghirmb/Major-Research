@@ -11874,7 +11874,7 @@ div#notebook {
 <span class="n">v2</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">ct</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="mi">1700000</span>
 <span class="n">v3</span> <span class="o">=</span> <span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">ct</span> <span class="o">-</span> <span class="mi">36750</span>
 
-<span class="n">output</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{x}</span><span class="s1">,</span><span class="si">{y}</span><span class="s1">方案交点：( </span><span class="si">{ct:e}</span><span class="s1"> , </span><span class="si">{v:e}</span><span class="s1"> )，相当于平均每天点击</span><span class="si">{z}</span><span class="s1">次&#39;</span>
+<span class="n">output</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{x}</span><span class="s1">,</span><span class="si">{y}</span><span class="s1">方案交点：( </span><span class="si">{ct:.2e}</span><span class="s1"> , </span><span class="si">{v:.2e}</span><span class="s1"> )，相当于平均每天点击</span><span class="si">{z:.1f}</span><span class="s1">次&#39;</span>
 <span class="c1">#1，2方案交点</span>
 <span class="n">ct12</span> <span class="o">=</span> <span class="mi">50000</span><span class="o">/</span><span class="n">x</span>
 <span class="n">v12</span> <span class="o">=</span> <span class="mi">90</span><span class="o">*</span><span class="n">ct12</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="mi">1200000</span>
@@ -11890,7 +11890,7 @@ div#notebook {
 <span class="n">v13</span> <span class="o">=</span> <span class="mi">90</span><span class="o">*</span><span class="n">ct13</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="mi">1200000</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">output</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">ct</span><span class="o">=</span><span class="n">ct13</span><span class="p">,</span><span class="n">v</span><span class="o">=</span><span class="n">v13</span><span class="p">,</span><span class="n">z</span><span class="o">=</span><span class="n">ct13</span><span class="o">/</span><span class="mi">1095</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 
-<span class="n">yld</span> <span class="o">=</span> <span class="s1">&#39;方案</span><span class="si">{x}</span><span class="s1">的赢利点：</span><span class="si">{ct}</span><span class="s1">，相当于平均每天点击</span><span class="si">{y}</span><span class="s1">次&#39;</span>
+<span class="n">yld</span> <span class="o">=</span> <span class="s1">&#39;方案</span><span class="si">{x}</span><span class="s1">的赢利点：</span><span class="si">{ct:.1f}</span><span class="s1">，相当于平均每天点击</span><span class="si">{y:.1f}</span><span class="s1">次&#39;</span>
 <span class="c1">#方案1赢利点</span>
 <span class="n">ct01</span> <span class="o">=</span> <span class="mi">1200000</span><span class="o">/</span><span class="p">(</span><span class="mi">90</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">yld</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">ct</span><span class="o">=</span><span class="n">ct01</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">ct01</span><span class="o">/</span><span class="mi">1095</span><span class="p">))</span>
@@ -11925,13 +11925,13 @@ div#notebook {
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>1,2方案交点：( 1.000000e+06 , 3.300000e+06 )，相当于平均每天点击913.2420091324201次
-2,3方案交点：( 5.544167e+05 , 1.072083e+06 )，相当于平均每天点击506.31659056316596次
-1,3方案交点：( 4.653000e+05 , 8.938500e+05 )，相当于平均每天点击424.93150684931504次
+<pre>1,2方案交点：( 1.00e+06 , 3.30e+06 )，相当于平均每天点击913.2次
+2,3方案交点：( 5.54e+05 , 1.07e+06 )，相当于平均每天点击506.3次
+1,3方案交点：( 4.65e+05 , 8.94e+05 )，相当于平均每天点击424.9次
 
-方案1的赢利点：266666.6666666667，相当于平均每天点击243.53120243531205次
-方案2的赢利点：340000.0，相当于平均每天点击310.50228310502285次
-方案3的赢利点：18375.0，相当于平均每天点击16.78082191780822次
+方案1的赢利点：266666.7，相当于平均每天点击243.5次
+方案2的赢利点：340000.0，相当于平均每天点击310.5次
+方案3的赢利点：18375.0，相当于平均每天点击16.8次
 </pre>
 </div>
 </div>
